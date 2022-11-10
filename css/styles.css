@@ -1,16 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  /* explore what this does to center everything */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  height: 100vh;
+}
+
 /* Grid */
 .layout {
   /* Set your own grid   */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 400px;
-  grid-column-gap: 1em;
+  min-width: 320px;
+  max-width: 1920px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 /* Widgets */
 section {
   background: rgb(19, 187, 41);
   padding: 1em;
+  border: 1px solid red;
   
   /* Relative Parent. Absolute Child */
   position: relative;
@@ -18,6 +38,8 @@ section {
 
 /* Time */
 .time {
+
+  grid-area: 2 / 1 / 3 / 2; 
 }
 
 .hours {
@@ -35,6 +57,8 @@ section {
 
 /* Date */
 .date {
+
+  grid-area: 2 / 2 / 3 / 3;
   
 }
 
@@ -52,6 +76,8 @@ section {
 
 /* Weather */
 .weather {
+
+  grid-area: 1 / 1 / 2 / 3;
   
 }
 
