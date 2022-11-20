@@ -7,7 +7,6 @@ const units = 'imperial';
 
 // URL query string
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=${units}`;
-console.log(url)
 
 // Using fetch to get data
 fetch(url)
