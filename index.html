@@ -33,6 +33,7 @@
     />
     <!-- My Styles -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/array.css" />
     <!-- My Scripts -->
     <script defer src="js/time.js"></script>
     <script defer src="js/date.js"></script>
@@ -40,28 +41,34 @@
   </head>
   <body>
     <main class="layout">
+      <section class="weather"></section>
       <!-- Time -->
       <section class="time">
-        <h1>Time</h1>
         <time>
-          <data class="hours">HH</data> : <data class="minutes">MM</data> :
-          <data class="seconds">SS</data>
-          <data class="amOrPM">AM/PM</data>
+          <data class="hours">HH</data> <data class="colon">:</data> <data class="minutes">MM</data> 
+          <!-- <data class="seconds">SS</data>
+          <data class="amOrPM">AM/PM</data> -->
         </time>
+        <section class="date">
+          <time>
+            <data class="month">Month</data>
+            <data class="dayOfMonth">00</data>, <data class="year">0000</data> -
+            <data class="dayOfWeek">SMTWTFS</data>
+          </time>
+        </section>  
       </section>
 
       <!--  Date -->
-      <section class="date">
-        <h1>Date</h1>
+      <!-- <section class="date">
         <time>
           <data class="month">Month</data>
           <data class="dayOfMonth">00</data>, <data class="year">0000</data> -
           <data class="dayOfWeek">SMTWTFS</data>
         </time>
-      </section>
+      </section> -->
 
       <!-- Weather -->
-      <section class="weather">
+      <!-- <section class="weather"> -->
         <!--
       <h1>Weather</h1>
       <data value="" class="city">City</data>

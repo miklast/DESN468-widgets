@@ -1,3 +1,6 @@
+//global variables
+var swap = 0;
+
 /************
 Dynamic Data
 ************/
@@ -25,7 +28,7 @@ Format Data
 // Get AM or PM
 const gotAmOrPM = gotHours >= 12 ? 'PM' : 'AM';
 // Get 12 hour format
-gotHours = gotHours % 12 || 12;
+gotHours = gotHours;
 // Optionally, append zero to single digit hours
 gotHours = gotHours < 10 ? `0${gotHours}` : gotHours;   
 // Optionally, append zero to single digit minutes
@@ -40,8 +43,8 @@ Get DOM Elements
 const hours = document.querySelector(".hours");
 // Get minutes
 const minutes = document.querySelector(".minutes");
-// Get seconds
-const seconds = document.querySelector(".seconds");
+// Get colon
+const colon = document.querySelector(".colon");
 // Get AM or PM
 const amOrPM = document.querySelector('.amOrPM');
 
@@ -52,10 +55,22 @@ Set DOM Elements
 hours.innerText = gotHours;
 // Set the minutes
 minutes.innerText = gotMinutes;
+//set colon
+if (swap === 0) {
+    swap = 1;
+    colon.style.color = "#10c20a";
+    colon.style.textShadow = "1px 1px 10px rgba(18, 223, 28, 0.4), 2px 2px 20px rgba(18, 223, 28, 0.4), 3px 3px 30px rgba(18, 223, 28, 0.4), 4px 4px 40px rgba(18, 223, 28, 0.4)";
+}
+else if (swap === 1) {
+    console.log(swap);
+    colon.style.color = "#070707";
+    colon.style.textShadow = "#070707 2px 2px";
+    swap = 0;
+}
 // Set the seconds
-seconds.innerText = gotSeconds;
-// Set AM or PM
-amOrPM.innerText = gotAmOrPM;
+// seconds.innerText = gotSeconds;
+// // Set AM or PM
+// amOrPM.innerText = gotAmOrPM;
   
 }
 
