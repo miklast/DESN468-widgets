@@ -62,7 +62,6 @@ if (swap === 0) {
     colon.style.textShadow = "1px 1px 10px rgba(18, 223, 28, 0.4), 2px 2px 20px rgba(18, 223, 28, 0.4), 3px 3px 30px rgba(18, 223, 28, 0.4), 4px 4px 40px rgba(18, 223, 28, 0.4)";
 }
 else if (swap === 1) {
-    console.log(swap);
     colon.style.color = "#070707";
     colon.style.textShadow = "#070707 2px 2px";
     swap = 0;
